@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -5,39 +6,53 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/normalize.css" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css" type="text/css">
   <title>Tiago Ferrão | Homepage</title>
 </head>
 <body>
   <header>
-    <a href="index.html">
-      <h1>Tiago Ferrao</h1>
-      <h2>Homepage</h2>
+    <a href="index.html" id="upper-bar">
+      <h1>TIAGO FERRAO</h1>
+      <h2>Powered by Innovation</h2>
     </a>
     <nav>
       <ul>
-        <li><a href="index.html"></a>CV</li>
-        <li><a href="about.html"></a>About</li>
-        <li><a href="contacts.html"></a>Contacts</li>
-    </ul>
-    </nav>
-  </header>
-  <secion>
-    <ul>
-      <li>
-        <figure>
-          <img src="img/profile.png" alt="">
-          <caption> item number 1 lorem ipsolum </caption>
-        </figure>
-      </li>
-
-    </ul>
-  </secion>
-  <footer>
-    <a href="emailto:tiago.ferrao@gmail.com"> <img src="img/email.svg" alt="email logo"></a>
-    <a href="emailto:tiago.ferrao@gmail.com"> <img src="img/git.svg" alt="github logo"> </a>
-    <a href="emailto:tiago.ferrao@gmail.com"> <img src="img/linkedin.svg" alt="linkedin logo"> </a>
-    <p>&copy; 2019 Tiago Ferrão</p>
-  </footer>
+        <li><a class="selected" href="index.html">CV</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+      </ul>
+      </nav>
+    </header>
+    <div id="wrapper">
+      <section>
+        <ul id="gallery">
+          <li> <!-- inicio de card da home page -->
+            <a href="#">
+            <img src="img/profile.png" alt="">
+            <p> item number 1 lorem ipsolum </p>
+            </a>
+          </li> <!-- fim de card da home page -->
+          <li> <!-- inicio de card da home page -->
+            <a href="#">
+            <img src="img/profile.png" alt="">
+            <p> item number 1 lorem ipsolum </p>
+            </a>
+          </li> <!-- fim de card da home page -->
+          <li> <!-- inicio de card da home page -->
+            <a href="#">
+            <img src="img/profile.png" alt="">
+            <p> item number 1 lorem ipsolum </p>
+            </a>
+          </li> <!-- fim de card da home page -->
+        </ul>
+    </section>
+    <footer>
+      <a href="emailto:tiago.ferrao@gmail.com"> <img src="img/email.svg" alt="email logo"></a>
+      <a href="emailto:tiago.ferrao@gmail.com"> <img src="img/git.svg" alt="github logo"> </a>
+      <a href="emailto:tiago.ferrao@gmail.com"> <img src="img/linkedin.svg" alt="linkedin logo"> </a>
+      <p>&copy; 2019 Tiago Ferrão</p>
+    </footer>
+  </div>
 </body>
 </html>
