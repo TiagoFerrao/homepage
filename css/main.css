@@ -133,7 +133,6 @@ Gallery
   margin: 0;
   padding: 0;
   list-style: none;
-
 }
 
 #gallery li {
@@ -177,12 +176,20 @@ min-height: 20px;
 background-repeat: no-repeat;
 background-size: 20px 20px;
 padding: 0 0 0 30px;
+margin: 0 0 10px;
 }
 
 .contact-info li.phone a {
-  background-image: url('img/mobile.svg');
+  background-image: url('../img/mobile.svg');
 }
 
+.contact-info li.mail a {
+  background-image: url('../img/at.svg');
+}
+
+.contact-info li.instagram a {
+  background-image: url('../img/instagram.svg');
+}
 
 
  /**************
