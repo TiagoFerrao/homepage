@@ -139,7 +139,13 @@ Gallery
 float: left;
 width: 45%;
 margin: 2.5%;
-background-color: #0e3c45;
+
+}
+
+#gallery li img {
+height: 120px;
+display: block;
+margin: 0 auto;
 }
 
 #gallery li a p {
@@ -147,6 +153,7 @@ margin: 0;
 padding: 5%;
 font-size: 0.75em;
 color: #3d984b;
+text-align: center;
 }
 
 
