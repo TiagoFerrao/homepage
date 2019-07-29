@@ -6,6 +6,7 @@ Contacts
   #primary {
     width: 50%;
     float: left;
+
   }
 
   #secondary {
@@ -17,20 +18,17 @@ Contacts
 Portfolio
 **************/
   #gallery li {
-    width: 28.33333%;
+    width: 28.3333%;
   }
 
   #gallery li:nth-child(4n) {
     clear: left;
   }
 
-  /**************
-About
-**************/
-  .avatar {
-    float: left;
-    margin: 0 5% 80px 0;
+  #gallery li img {
+    min-height: 90px;
   }
+
 }
 
 
@@ -39,10 +37,16 @@ About
 
   nav {
     float: right;
-    font-size: 1.25em;
+    font-size: 1em;
     margin-right: 5%;
     text-align: right;
     width: 45%;
+    padding-top: 20px;
+  }
+
+  nav a {
+    margin-left: 0 auto;
+    padding-bottom: 0;
   }
 
   #upper-bar {
@@ -54,7 +58,7 @@ About
 
 
   h1 {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 
   h2 {
@@ -62,7 +66,19 @@ About
     margin-bottom: 20px;
   }
 
-  header {
-    border-bottom: 1px solid #7DE38D;
+
+  .avatar {
+  float: left;
+  margin-right: 5%;
   }
+
+  .text-right h3 {
+    display: inline;
+  }
+
+  #gallery li img {
+    min-height: 100px;
+  }
+
+
 }
