@@ -179,10 +179,50 @@ contacts
   background-image: url('../img/instagram.svg');
 }
 
+
+/**************
+CV ITEM
+**************/
+#intro {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#intro  img{
+  width: 30%;
+  margin-top: 35px;
+}
+
+#grid h3 {
+padding-top: 20px;
+}
+
+/* List of item: picture and paraghraph */
+
+.line {
+  margin: 25px auto;
+}
+
+#grid ul {
+  list-style: none;
+  padding: 0;
+}
+
+#grid ul li img {
+  width: 20%;
+  max-height: 80px;
+}
+
+#grid p {
+  width: 70%;
+  float: right;
+  margin: 0 auto;
+}
+
+
 /**************
 Under contructions
 **************/
-
 .temporary {
   margin: 0 auto;
   text-align: center;
@@ -190,6 +230,7 @@ Under contructions
 
 .temporary img{
   width: 50%;
+  margin-top: 35px;
 }
 
 /**************
