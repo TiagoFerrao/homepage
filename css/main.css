@@ -48,7 +48,7 @@ img {
 }
 
 /**************
-HEADER
+HEADing
  **************/
 
 /* dark, invisible header */
@@ -185,6 +185,7 @@ background-size: 20px 20px;
 padding: 0 0 0 30px;
 margin: 0 0 10px;
 }
+
 
 .contact-info li.phone a {
   background-image: url('../img/mobile.svg');
