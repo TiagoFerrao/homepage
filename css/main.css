@@ -53,7 +53,6 @@ HEADing
 
 /* dark, invisible header */
 header {
-  border-color: #7DE38D;
   float: left;
   margin: 0 0 30px 0;
   padding: 5px 0 0 0;
@@ -65,7 +64,7 @@ header {
 h1 {
   font-family: 'Titillium Web', sans-serif;
   margin: 15px 0 ;
-  font-size: 1.75em;
+  font-size: 1.85em;
   font-weight: normal;
   line-height: 0.8em;
 }
@@ -79,14 +78,18 @@ h2 {
 h3 {
 margin: 0 0 1em 0;
 font-weight: 900;
+font-size: 1.25em;
+border-bottom: 0.5px dotted #3d984b;
 }
-
+/* #3d984b
+#7DE38D */
 
 /**************
 NAVIGATION
 **************/
 
 nav {
+
   text-align: center;
   padding: 10px 0;
   margin: 20px 0 0;
@@ -139,7 +142,10 @@ Gallery
 float: left;
 width: 45%;
 margin: 2.5%;
+}
 
+#gallery li:nth-child(2n+1) {
+clear: both;
 }
 
 #gallery li img {
@@ -170,6 +176,12 @@ margin: 0 auto 30px;
 /**************
 contacts
 **************/
+
+#secondary {
+  margin-top: 10%;
+
+}
+
 .contact-info {
   list-style: none;
   padding: 0;
