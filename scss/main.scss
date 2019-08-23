@@ -2,7 +2,17 @@
 VARIABLES
  **************/
 /* colors */
+$background: #00242b;
+$light-background: #0e3c45;
+$strong-accent: #7DE38D;
+$soft-accent: #3d984b;
 /* fonts */
+$body-text: 'Lato', sans-serif;
+$title: 'alternative', sans-serif;
+// $title: 'Titillium Web', sans-serif;
+$terminal: 'Inconsolata', monospace;
+// $terminal: 'Inconsolata', monospace;
+
 @font-face {
   font-family: "alternative";
   src: url("hoog0553.ttf");
@@ -12,14 +22,14 @@ GENERAL
  **************/
 /* site body */
 body {
-  background: #00242b;
-  color: #7DE38D;
-  font-family: "Inconsolata", monospace;
+  background: $background;
+  color: $strong-accent;
+  font-family: $terminal;
 }
 
 a {
   text-decoration: none;
-  color: #7DE38D;
+  color: $strong-accent;
 }
 
 img {
@@ -28,9 +38,10 @@ img {
 
 .icon {
   max-with: 100%;
-}
-.icon path {
-  fill: #7DE38D;
+
+  path {
+    fill: $strong-accent;
+  }
 }
 
 #wrapper {
@@ -38,16 +49,16 @@ img {
   margin: 0 auto;
   padding: 0 5%;
   height: 100%;
-}
-#wrapper p {
-  text-align: left;
+
+  p {
+    text-align: left;
+  }
 }
 
 #upper-bar {
   text-align: center;
   margin: 0;
 }
-
 /**************
 HEADing
  **************/
@@ -60,7 +71,7 @@ header {
 }
 
 h1 {
-  font-family: "alternative", sans-serif;
+  font-family: $title;
   margin: 15px 0;
   font-size: 1.85em;
   font-weight: normal;
@@ -68,18 +79,17 @@ h1 {
 }
 
 h2 {
-  font-family: "alternative", sans-serif;
+  font-family: $title;
   margin: -5px 0 0;
   font-size: 0.75em;
 }
 
 h3 {
-  font-family: "Inconsolata", monospace;
+  font-family: $terminal;
   font-weight: 900;
   font-size: 1.25em;
-  border-bottom: 1px dotted #7DE38D;
+  border-bottom: 1px dotted $strong-accent;
 }
-
 /**************
 NAVIGATION
 **************/
@@ -87,34 +97,34 @@ nav {
   text-align: center;
   padding: 10px 0;
   margin: 20px 0 0;
-  font-family: "alternative", sans-serif;
-}
-nav ul {
-  list-style: none;
-  margin: 0 10px;
-  padding: 0;
-}
-nav ul li {
-  display: inline-block;
-}
-nav ul li a {
-  font-weight: 900;
-  padding: 15px 10px;
-}
+  font-family: $title;
 
+  ul {
+    list-style: none;
+    margin: 0 10px;
+    padding: 0;
+
+    li {
+      display: inline-block;
+
+      a {
+        font-weight: 900;
+        padding: 15px 10px;
+      }
+    }
+  }
+}
 /* links on the header */
 nav a,
 nav a:visited {
   color: #7de38d;
   font-weight: 900;
 }
-
 /* selected links on the header */
 nav a.selected,
 nav a:hover {
-  color: #3d984b;
+  color: $soft-accent;
 }
-
 /**************
 Gallery
  **************/
@@ -122,13 +132,13 @@ Gallery
   margin: 0;
   padding: 0;
   list-style: none;
-}
-#gallery li {
-  float: left;
-  width: 45%;
-  margin: 2.5%;
-}
 
+  li {
+    float: left;
+    width: 45%;
+    margin: 2.5%;
+  }
+}
 /* #gallery li:nth-child(2n+1) {
 clear: both;
 } */
@@ -142,10 +152,9 @@ clear: both;
   margin: 0;
   padding: 5%;
   font-size: 0.75em;
-  color: #3d984b;
+  color: $soft-accent;
   text-align: center;
 }
-
 /**************
 ABOUT
 **************/
@@ -154,7 +163,6 @@ ABOUT
   display: block;
   margin: 0 auto 30px;
 }
-
 /**************
 contacts
 **************/
@@ -163,14 +171,15 @@ contacts
   padding: 0;
   margin: 0;
   font-size: 0.9em;
-}
-.contact-info a {
-  display: block;
-  min-height: 20px;
-  background-repeat: no-repeat;
-  background-size: 20px 20px;
-  padding: 0 0 0 30px;
-  margin: 0 0 10px;
+
+  a {
+    display: block;
+    min-height: 20px;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    padding: 0 0 0 30px;
+    margin: 0 0 10px;
+  }
 }
 
 .contact-info li.phone a {
@@ -184,7 +193,6 @@ contacts
 .contact-info li.instagram a {
   background-image: url("../img/instagram.svg");
 }
-
 /**************
 CV PAGE
 **************/
@@ -193,30 +201,33 @@ CV PAGE
   display: grid;
   grid-template-columns: 2fr 8fr;
   grid-gap: 12px;
-}
-.grid .item {
-  align-self: auto;
-  align-self: center;
-  align-items: center;
-}
-.grid .item .icon {
-  max-height: 80px;
+
+  .item {
+    align-self: auto;
+      align-self:center;
+      align-items: center;
+
+    .icon {
+      max-height: 80px;
+
+    }
+  }
 }
 
 #intro {
   margin: 0 auto;
   text-align: center;
-}
-#intro img,
-#intro svg {
-  width: 30%;
-  margin-top: 35px;
+
+  img,
+  svg {
+    width: 30%;
+    margin-top: 35px;
+  }
 }
 
 #grid h3 {
   padding-top: 20px;
 }
-
 /* List of item: picture and paraghraph */
 /**************
 Under contructions
@@ -224,13 +235,13 @@ Under contructions
 .temporary {
   margin: 0 auto;
   text-align: center;
-}
-.temporary img,
-.temporary object {
-  width: 50%;
-  margin-top: 35px;
-}
 
+  img,
+  object {
+    width: 50%;
+    margin-top: 35px;
+  }
+}
 /**************
  FOOTER
  **************/
@@ -246,5 +257,3 @@ footer {
   height: 25px;
   margin: 0;
 }
-
-/*# sourceMappingURL=main.css.map */
