@@ -1,259 +1,340 @@
-/**************
-VARIABLES
- **************/
-/* colors */
+@import "./fontawesome.scss";
+@import "./duotone.scss";
+@import "./light.scss";
+@import "./solid.scss";
+@import "./brands.scss";
+@font-face {
+  font-family: "alternative";
+  src: url("../webfonts/hoog0553.ttf");
+}
+// VARIABLES
 $background: #00242b;
 $light-background: #0e3c45;
 $strong-accent: #7DE38D;
 $soft-accent: #3d984b;
-/* fonts */
-$body-text: 'Lato', sans-serif;
-$title: 'alternative', sans-serif;
-// $title: 'Titillium Web', sans-serif;
-$terminal: 'Inconsolata', monospace;
-// $terminal: 'Inconsolata', monospace;
-
-@font-face {
-  font-family: "alternative";
-  src: url("hoog0553.ttf");
-}
+$title: 'alternative', sans-serif; // $title: 'Titillium Web', sans-serif;
+$body-text: 'Inconsolata', sans-serif; // $terminal: 'Inconsolata', monospace;
+$max-width: 980px;
 /**************
 GENERAL
  **************/
-/* site body */
-body {
+* {
   background: $background;
   color: $strong-accent;
-  font-family: $terminal;
-}
-
-a {
-  text-decoration: none;
-  color: $strong-accent;
-}
-
-img {
-  max-width: 100%;
-}
-
-.icon {
-  max-with: 100%;
-
-  path {
-    fill: $strong-accent;
-  }
+  font-family: $body-text;
+  box-sizing: border-box;
 }
 
 #wrapper {
-  max-width: 840px;
-  margin: 0 auto;
-  padding: 0 5%;
-  height: 100%;
+  max-width: $max-width;
+  min-width: 300px;
+  margin: 2.5% auto;
+  padding: 0 2.5%;
 
-  p {
-    text-align: left;
-  }
+
 }
 
-#upper-bar {
-  text-align: center;
-  margin: 0;
-}
-/**************
-HEADing
- **************/
-/* dark, invisible header */
-header {
-  float: left;
-  margin: 0 0 30px;
-  padding: 5px 0 0;
-  width: 100%;
+p {
+  line-height: 1.6em;
+  text-align: justify;
 }
 
-h1 {
+a {
+
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
   font-family: $title;
-  margin: 15px 0;
-  font-size: 1.85em;
-  font-weight: normal;
-  line-height: 0.8em;
-}
-
-h2 {
-  font-family: $title;
-  margin: -5px 0 0;
-  font-size: 0.75em;
 }
 
 h3 {
-  font-family: $terminal;
-  font-weight: 900;
-  font-size: 1.25em;
-  border-bottom: 1px dotted $strong-accent;
+  border-bottom: 1px dashed;
 }
+
 /**************
-NAVIGATION
-**************/
-nav {
+UPPER_BAR
+ **************/
+/* dark, invisible header */
+header {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px,auto));
+  margin-bottom: 15%;
+  @media (min-width: 600px) { margin-bottom: 15%;}
+}
+
+#name_title {
   text-align: center;
-  padding: 10px 0;
-  margin: 20px 0 0;
-  font-family: $title;
+  @media (min-width: 600px) { text-align: left; }
+  text-decoration: none;
+
+  h1,
+  h2 {
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 1.85em;
+    font-weight: normal;
+    letter-spacing: 0.03em;
+  }
+
+  h2 {
+    font-size: 0.80em;
+    line-height: 2em;
+  }
+}
+
+nav.item {
+  text-align:center;
+  @media (min-width: 600px) { text-align: right; }
+  padding: 10px 0 0;
+  margin: 10px 0 0;
+  align-self: end;
 
   ul {
     list-style: none;
-    margin: 0 10px;
+    margin: 0 auto;
     padding: 0;
+  }
 
-    li {
-      display: inline-block;
+  li {
+    display: inline-block;
 
-      a {
-        font-weight: 900;
-        padding: 15px 10px;
-      }
+    a {
+      font-family: $title;
+      color: $soft-accent;
+      padding: 0 10px;
+      text-decoration: none;
     }
   }
 }
-/* links on the header */
-nav a,
-nav a:visited {
-  color: #7de38d;
-  font-weight: 900;
-}
-/* selected links on the header */
-nav a.selected,
-nav a:hover {
-  color: $soft-accent;
+
+.selected {
+  background-color: $strong-accent;
+  color: $background !important;
 }
 /**************
-Gallery
+CV - Stuff I've Done
  **************/
-#gallery {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.gallery {
+  margin: 2px;
+  display: grid;
+  grid-template-columns: repeat(2, 187px);
+  @media (min-width: 600px) { grid-template-columns: repeat(3, 187px);}
+  grid-column-gap: 1em;
+  grid-row-gap: 2em;
+  justify-content: center;
 
-  li {
-    float: left;
-    width: 45%;
-    margin: 2.5%;
+  .item {
+
+    .icon {
+      height: 80px;
+      display: block;
+      margin: 0 auto;
+
+      .fa-secondary {
+        opacity: 0.4;
+      }
+
+      .fa-primary {
+        opacity: 1;
+      }
+
+      :hover {
+        .fa-secondary {
+          opacity: 1;
+          transition-duration: 0.4s;
+        }
+
+        .fa-primary {
+          opacity: 0.4;
+        }
+      }
+    }
+
+    p {
+      text-align:center;
+      margin: 2.5% 2.5%;
+      padding: 0;
+      font-size: 0.75em;
+      color: $soft-accent;
+
+
+    }
   }
 }
-/* #gallery li:nth-child(2n+1) {
-clear: both;
-} */
-#gallery li .icon {
-  max-height: 90px;
-  display: block;
-  margin: 0 auto;
-}
-
-#gallery li a p {
-  margin: 0;
-  padding: 5%;
-  font-size: 0.75em;
-  color: $soft-accent;
-  text-align: center;
-}
 /**************
-ABOUT
+ABOUT ME
 **************/
+
 .avatar {
-  max-width: 200px;
-  display: block;
-  margin: 0 auto 30px;
+  max-height: 200px;
+  flex-grow: 0;
 }
+
+.about_me {
+  margin: 0 5%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+.text-justified {
+  max-width: 500px;
+
+}
+}
+
 /**************
-contacts
+CONTACTS
 **************/
-.contact-info {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 0.9em;
+.contacts {
+  margin: 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,auto));
+  grid-column-gap: 5%;
 
-  a {
-    display: block;
-    min-height: 20px;
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
-    padding: 0 0 0 30px;
-    margin: 0 0 10px;
+  p {
+    text-align: left;
+    margin: 0;
   }
-}
 
-.contact-info li.phone a {
-  background-image: url("../img/mobile.svg");
-}
+  .contact-info {
+    padding-left: 0;
+    display: grid;
 
-.contact-info li.mail a {
-  background-image: url("../img/at.svg");
-}
+    li {
+      list-style: none;
+      margin-bottom: 10px;
+        .icon {
+          height: 25px;
+          vertical-align: middle;
+          margin-right: 6px;
+        }
+      }
+      .address {
+        display: grid;
+        grid-template-columns: auto 1fr;
+      }
 
-.contact-info li.instagram a {
-  background-image: url("../img/instagram.svg");
-}
+
+    }
+  }
+
 /**************
 CV PAGE
 **************/
-.grid {
-  max-width: 840px;
+#intro {
+  max-width: 90%;
+  margin: 0 auto;
+
+  a {text-decoration: underline;}
+
+  .icon {
+    height: 90px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+
+.cards {
+  margin: 50px 5% 5%;
   display: grid;
-  grid-template-columns: 2fr 8fr;
-  grid-gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+  grid-gap: 2em;
 
-  .item {
-    align-self: auto;
-      align-self:center;
-      align-items: center;
+  .card_header {
+    display: grid;
+    grid-template-columns: 65px minmax(165px,auto);
+    grid-gap: 10px;
+    align-items: center;
 
-    .icon {
-      max-height: 80px;
+    .card_titles {
+      display: grid;
+      grid-template-rows: 1fr 1fr auto;
+      border-left:1px dashed;
+
+      .title {
+        font-family: $title;
+        font-size: 1.3em;
+        padding-left: 5px;
+      }
+
+      .subtitle {
+        border-bottom: 1px dashed;
+        font-family: $title;
+        font-size: 0.8em;
+        padding-left: 5px;
+
+      }
+
+      .date {
+        // align-self: center;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-column-gap: 5%;
+        padding: 2%;
+
+        i {margin-right: 5px;}
+
+        span {
+          color: $soft-accent;
+          text-align: justify;
+          line-height: 1.25em;
+
+        }
+      }
+    }
+  }
+
+    .text-justified {
+      text-align: justify;
+      line-height: 1.25em;
 
     }
   }
-}
 
-#intro {
-  margin: 0 auto;
-  text-align: center;
 
-  img,
-  svg {
-    width: 30%;
-    margin-top: 35px;
-  }
-}
 
-#grid h3 {
-  padding-top: 20px;
-}
-/* List of item: picture and paraghraph */
 /**************
 Under contructions
 **************/
+
+
 .temporary {
   margin: 0 auto;
   text-align: center;
 
-  img,
-  object {
-    width: 50%;
-    margin-top: 35px;
+  svg {
+    max-height: 300px;
   }
-}
+  p { text-align: center;}}
+
+
+
 /**************
  FOOTER
  **************/
 footer {
+  margin-top: 15%;
   font-size: 0.75em;
   text-align: center;
-  padding-top: 50px;
-  clear: both;
-}
 
-.social.icon {
-  width: 25px;
-  height: 25px;
-  margin: 0;
+  .icon {
+    height: 25px;
+    margin: 0 4px;
+  }
+
+  p {
+    text-align: center;
+    margin: 2px;
+  }
+
+
 }
