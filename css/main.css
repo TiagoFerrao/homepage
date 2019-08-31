@@ -15254,6 +15254,27 @@ GENERAL
   color: #7DE38D;
   font-family: "Inconsolata", sans-serif;
   box-sizing: border-box;
+  --fa-primary-color: blue;
+  --fa-secondary-color: white;
+}
+
+.icon {
+  fill: #7DE38D;
+}
+.icon .fa-primary {
+  fill: #7DE38D;
+}
+.icon .fa-secondary {
+  fill: #288f5b;
+}
+.icon :hover {
+  transition: 0.4s;
+}
+.icon :hover .fa-primary {
+  fill: #288f5b;
+}
+.icon :hover .fa-secondary {
+  fill: #7DE38D;
 }
 
 #wrapper {
@@ -15342,7 +15363,7 @@ nav.item li {
 }
 nav.item li a {
   font-family: "alternative", sans-serif;
-  color: #3d984b;
+  color: #288f5b;
   padding: 0 10px;
   text-decoration: none;
 }
@@ -15373,33 +15394,32 @@ CV - Stuff I've Done
   display: block;
   margin: 0 auto;
 }
-.gallery .item .icon .fa-secondary {
-  opacity: 0.4;
-}
-.gallery .item .icon .fa-primary {
-  opacity: 1;
-}
-.gallery .item .icon :hover .fa-secondary {
-  opacity: 1;
-  transition-duration: 0.4s;
-}
-.gallery .item .icon :hover .fa-primary {
-  opacity: 0.4;
-}
 .gallery .item p {
   text-align: center;
   margin: 2.5% 2.5%;
   padding: 0;
   font-size: 0.75em;
-  color: #3d984b;
+  color: #288f5b;
 }
 
 /**************
 ABOUT ME
 **************/
 .avatar {
-  max-height: 200px;
+  height: 200px;
   flex-grow: 0;
+  background: #7DE38D;
+  -webkit-clip-path: circle(90px at center);
+  clip-path: circle(90px at center);
+}
+
+.avatar:hover {
+  transition: 1s;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 
 .about_me {
@@ -15464,7 +15484,8 @@ CV PAGE
 .cards {
   margin: 50px 5% 5%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+  grid-template-columns: repeat(auto-fill, minmax(350px, auto));
+  justify-content: center;
   grid-gap: 2em;
 }
 .cards .card_header {
@@ -15499,13 +15520,21 @@ CV PAGE
   margin-right: 5px;
 }
 .cards .card_header .card_titles .date span {
-  color: #3d984b;
+  color: #288f5b;
   text-align: justify;
   line-height: 1.25em;
 }
 .cards .text-justified {
   text-align: justify;
-  line-height: 1.25em;
+  line-height: 1.4em;
+}
+.cards .text-justified a {
+  text-decoration: underline;
+}
+@media (max-width: 415px) {
+  .cards .text-justified {
+    display: none;
+  }
 }
 
 /**************

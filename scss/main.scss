@@ -6,15 +6,30 @@
 @font-face {
   font-family: "alternative";
   src: url("../webfonts/hoog0553.ttf");
+
 }
 // VARIABLES
-$background: #00242b;
-$light-background: #0e3c45;
-$strong-accent: #7DE38D;
-$soft-accent: #3d984b;
 $title: 'alternative', sans-serif; // $title: 'Titillium Web', sans-serif;
 $body-text: 'Inconsolata', sans-serif; // $terminal: 'Inconsolata', monospace;
 $max-width: 980px;
+
+//Colors
+// Green_Screen
+$background: #00242b;
+$light-background: #0e3c45;
+$strong-accent: #7DE38D;
+$soft-accent: #288f5b;
+
+// Alternative purple
+// $soft-accent: #3c3fb4;
+// $strong-accent: #bd33c4;
+// $background: dark;
+
+// Alternative christmas
+// $soft-accent: #e0ab5a;
+// $light-background: #2a6736;
+// $strong-accent: #2c6037;
+// $background: #c81c1c;
 /**************
 GENERAL
  **************/
@@ -23,7 +38,20 @@ GENERAL
   color: $strong-accent;
   font-family: $body-text;
   box-sizing: border-box;
+  --fa-primary-color: blue;
+  --fa-secondary-color: white;
 }
+
+.icon {
+    fill:$strong-accent;
+    .fa-primary {fill:$strong-accent;}
+    .fa-secondary {fill:$soft-accent;}
+  :hover {
+    transition: 0.4s;
+    .fa-primary {fill:$soft-accent;}
+    .fa-secondary {fill:$strong-accent;}
+  }}
+
 
 #wrapper {
   max-width: $max-width;
@@ -135,26 +163,7 @@ CV - Stuff I've Done
       height: 80px;
       display: block;
       margin: 0 auto;
-
-      .fa-secondary {
-        opacity: 0.4;
       }
-
-      .fa-primary {
-        opacity: 1;
-      }
-
-      :hover {
-        .fa-secondary {
-          opacity: 1;
-          transition-duration: 0.4s;
-        }
-
-        .fa-primary {
-          opacity: 0.4;
-        }
-      }
-    }
 
     p {
       text-align:center;
@@ -172,9 +181,21 @@ ABOUT ME
 **************/
 
 .avatar {
-  max-height: 200px;
+  height: 200px;
   flex-grow: 0;
+  background: $strong-accent;
+  -webkit-clip-path: circle(90px at center);
+  clip-path: circle(90px at center);
 }
+
+.avatar:hover {
+  transition: 1s;
+  -webkit-transform:rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);}
+
 
 .about_me {
   margin: 0 5%;
@@ -246,7 +267,10 @@ CV PAGE
 .cards {
   margin: 50px 5% 5%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+  grid-template-columns: repeat(auto-fill, minmax(350px, auto));
+
+  justify-content: center;
+
   grid-gap: 2em;
 
   .card_header {
@@ -275,7 +299,6 @@ CV PAGE
       }
 
       .date {
-        // align-self: center;
         display: grid;
         grid-template-columns: 1fr auto;
         grid-column-gap: 5%;
@@ -295,7 +318,11 @@ CV PAGE
 
     .text-justified {
       text-align: justify;
-      line-height: 1.25em;
+      line-height: 1.4em;
+      a {
+        text-decoration: underline;
+      }
+      @media (max-width: 415px) {display:none;}
 
     }
   }
