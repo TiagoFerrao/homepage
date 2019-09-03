@@ -6,25 +6,21 @@
 @font-face {
   font-family: "alternative";
   src: url("../webfonts/hoog0553.ttf");
-
 }
 // VARIABLES
 $title: 'alternative', sans-serif; // $title: 'Titillium Web', sans-serif;
 $body-text: 'Inconsolata', sans-serif; // $terminal: 'Inconsolata', monospace;
 $max-width: 980px;
-
 //Colors
 // Green_Screen
 $background: #00242b;
 $light-background: #0e3c45;
 $strong-accent: #7DE38D;
 $soft-accent: #288f5b;
-
 // Alternative purple
 // $soft-accent: #3c3fb4;
 // $strong-accent: #bd33c4;
 // $background: dark;
-
 // Alternative christmas
 // $soft-accent: #e0ab5a;
 // $light-background: #2a6736;
@@ -43,14 +39,29 @@ GENERAL
 }
 
 .icon {
-    fill:$strong-accent;
-    .fa-primary {fill:$strong-accent;}
-    .fa-secondary {fill:$soft-accent;}
+  fill: $strong-accent;
+
+  .fa-primary {
+    fill: $strong-accent;
+  }
+
+  .fa-secondary {
+    fill: $soft-accent;
+  }
+
   :hover {
     transition: 0.4s;
-    .fa-primary {fill:$soft-accent;}
-    .fa-secondary {fill:$strong-accent;}
-  }}
+
+    .fa-primary {
+      fill: $soft-accent;
+    }
+
+    .fa-secondary {
+      fill: $strong-accent;
+    }
+  }
+}
+
 
 
 #wrapper {
@@ -58,8 +69,6 @@ GENERAL
   min-width: 300px;
   margin: 2.5% auto;
   padding: 0 2.5%;
-
-
 }
 
 p {
@@ -68,7 +77,6 @@ p {
 }
 
 a {
-
   text-decoration: none;
 }
 
@@ -81,7 +89,6 @@ h3 {
 h3 {
   border-bottom: 1px dashed;
 }
-
 /**************
 UPPER_BAR
  **************/
@@ -90,12 +97,16 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px,auto));
   margin-bottom: 15%;
-  @media (min-width: 600px) { margin-bottom: 15%;}
+  @media (min-width: 600px) {
+    margin-bottom: 15%;
+  }
 }
 
 #name_title {
   text-align: center;
-  @media (min-width: 600px) { text-align: left; }
+  @media (min-width: 600px) {
+    text-align: left;
+  }
   text-decoration: none;
 
   h1,
@@ -117,8 +128,10 @@ header {
 }
 
 nav.item {
-  text-align:center;
-  @media (min-width: 600px) { text-align: right; }
+  text-align: center;
+  @media (min-width: 600px) {
+    text-align: right;
+  }
   padding: 10px 0 0;
   margin: 10px 0 0;
   align-self: end;
@@ -152,34 +165,32 @@ CV - Stuff I've Done
   margin: 2px;
   display: grid;
   grid-template-columns: repeat(2, 187px);
-  @media (min-width: 600px) { grid-template-columns: repeat(3, 187px);}
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(3, 187px);
+  }
   grid-column-gap: 1em;
   grid-row-gap: 2em;
   justify-content: center;
 
   .item {
-
     .icon {
       height: 80px;
       display: block;
       margin: 0 auto;
-      }
+    }
 
     p {
-      text-align:center;
-      margin: 2.5% 2.5%;
+      text-align: center;
+      margin: 2.5%;
       padding: 0;
       font-size: 0.75em;
       color: $soft-accent;
-
-
     }
   }
 }
 /**************
 ABOUT ME
 **************/
-
 .avatar {
   height: 200px;
   flex-grow: 0;
@@ -190,12 +201,12 @@ ABOUT ME
 
 .avatar:hover {
   transition: 1s;
-  -webkit-transform:rotate(360deg);
+  -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
   -o-transform: rotate(360deg);
-  transform: rotate(360deg);}
-
+  transform: rotate(360deg);
+}
 
 .about_me {
   margin: 0 5%;
@@ -205,12 +216,10 @@ ABOUT ME
   justify-content: center;
   align-items: center;
 
-.text-justified {
-  max-width: 500px;
-
+  .text-justified {
+    max-width: 500px;
+  }
 }
-}
-
 /**************
 CONTACTS
 **************/
@@ -232,21 +241,20 @@ CONTACTS
     li {
       list-style: none;
       margin-bottom: 10px;
-        .icon {
-          height: 25px;
-          vertical-align: middle;
-          margin-right: 6px;
-        }
-      }
-      .address {
-        display: grid;
-        grid-template-columns: auto 1fr;
-      }
 
+      .icon {
+        height: 25px;
+        vertical-align: middle;
+        margin-right: 6px;
+      }
+    }
 
+    .address {
+      display: grid;
+      grid-template-columns: auto 1fr;
     }
   }
-
+}
 /**************
 CV PAGE
 **************/
@@ -254,7 +262,9 @@ CV PAGE
   max-width: 90%;
   margin: 0 auto;
 
-  a {text-decoration: underline;}
+  a {
+    text-decoration: underline;
+  }
 
   .icon {
     height: 90px;
@@ -263,14 +273,11 @@ CV PAGE
   }
 }
 
-
 .cards {
   margin: 50px 5% 5%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, auto));
-
   justify-content: center;
-
   grid-gap: 2em;
 
   .card_header {
@@ -282,7 +289,7 @@ CV PAGE
     .card_titles {
       display: grid;
       grid-template-rows: 1fr 1fr auto;
-      border-left:1px dashed;
+      border-left: 1px dashed;
 
       .title {
         font-family: $title;
@@ -295,7 +302,6 @@ CV PAGE
         font-family: $title;
         font-size: 0.8em;
         padding-left: 5px;
-
       }
 
       .date {
@@ -304,36 +310,34 @@ CV PAGE
         grid-column-gap: 5%;
         padding: 2%;
 
-        i {margin-right: 5px;}
+        i {
+          margin-right: 5px;
+        }
 
         span {
           color: $soft-accent;
           text-align: justify;
           line-height: 1.25em;
-
         }
       }
     }
   }
 
-    .text-justified {
-      text-align: justify;
-      line-height: 1.4em;
-      a {
-        text-decoration: underline;
-      }
-      @media (max-width: 415px) {display:none;}
+  .text-justified {
+    text-align: justify;
+    line-height: 1.4em;
 
+    a {
+      text-decoration: underline;
+    }
+    @media (max-width: 415px) {
+      display: none;
     }
   }
-
-
-
+}
 /**************
 Under contructions
 **************/
-
-
 .temporary {
   margin: 0 auto;
   text-align: center;
@@ -341,10 +345,11 @@ Under contructions
   svg {
     max-height: 300px;
   }
-  p { text-align: center;}}
 
-
-
+  p {
+    text-align: center;
+  }
+}
 /**************
  FOOTER
  **************/
@@ -362,6 +367,4 @@ footer {
     text-align: center;
     margin: 2px;
   }
-
-
 }
