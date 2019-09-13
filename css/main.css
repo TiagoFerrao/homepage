@@ -15440,7 +15440,7 @@ CONTACTS
 .contacts {
   margin: 5%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   grid-column-gap: 5%;
 }
 .contacts p {
@@ -15448,8 +15448,9 @@ CONTACTS
   margin: 0;
 }
 .contacts .contact-info {
-  padding-left: 0;
+  padding-left: 10px;
   display: grid;
+  margin-right: 30px;
 }
 .contacts .contact-info li {
   list-style: none;
@@ -15458,11 +15459,16 @@ CONTACTS
 .contacts .contact-info li .icon {
   height: 25px;
   vertical-align: middle;
-  margin-right: 6px;
+  margin-right: 7px;
 }
 .contacts .contact-info .address {
   display: grid;
   grid-template-columns: auto 1fr;
+}
+@media only screen and (min-width: 600px) {
+  .contacts #map {
+    grid-column: 1/span 2;
+  }
 }
 
 /**************
@@ -15525,7 +15531,7 @@ CV PAGE
   line-height: 1.25em;
 }
 .cards .text-justified {
-  text-align: justify;
+  text-align: left;
   line-height: 1.4em;
 }
 .cards .text-justified a {

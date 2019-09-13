@@ -11,6 +11,7 @@
 $title: 'alternative', sans-serif; // $title: 'Titillium Web', sans-serif;
 $body-text: 'Inconsolata', sans-serif; // $terminal: 'Inconsolata', monospace;
 $max-width: 980px;
+$tablet: 600px;
 //Colors
 // Green_Screen
 $background: #00242b;
@@ -226,8 +227,14 @@ CONTACTS
 .contacts {
   margin: 5%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,auto));
+  grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
   grid-column-gap: 5%;
+  // flex-wrap: wrap;
+  // justify-content:space-between;
+
+  // #general_info {margin-bottom: 25px;}
+
+
 
   p {
     text-align: left;
@@ -235,8 +242,9 @@ CONTACTS
   }
 
   .contact-info {
-    padding-left: 0;
+    padding-left: 10px;
     display: grid;
+    margin-right: 30px;
 
     li {
       list-style: none;
@@ -245,7 +253,7 @@ CONTACTS
       .icon {
         height: 25px;
         vertical-align: middle;
-        margin-right: 6px;
+        margin-right: 7px;
       }
     }
 
@@ -254,7 +262,13 @@ CONTACTS
       grid-template-columns: auto 1fr;
     }
   }
+  @media only screen and (min-width: $tablet ) {
+    #map {grid-column: 1 / span 2}
+  }
+
+
 }
+
 /**************
 CV PAGE
 **************/
@@ -324,7 +338,7 @@ CV PAGE
   }
 
   .text-justified {
-    text-align: justify;
+    text-align: left;
     line-height: 1.4em;
 
     a {

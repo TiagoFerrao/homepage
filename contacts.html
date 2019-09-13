@@ -21,6 +21,20 @@
     <meta property="og:description" content="A brief page description" />
     <link rel="icon" href="./img/bee.png">
     <link rel="apple-touch-icon" href="./img/bee.png">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147985203-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-147985203-1');
+    </script>
+
   </head>
 
   <body id="wrapper">
@@ -32,8 +46,8 @@
       </a>
       <nav class="item">
         <ul>
-          <li><a href="index.html">About me</a></li>
-          <li><a href="cv.html">CV</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">WTF?</a></li>
           <li><a class="selected" href="contacts.html">Contacts</a></li>
         </ul>
       </nav>
@@ -43,13 +57,13 @@
 
     <div class="contacts">
 
-      <div id="primary" class="item">
-        <h3> Office Location </h3>
-        <iframe src="https://snazzymaps.com/embed/180469" width="100%" height="300" style="border:none;"> </iframe>
+      <div id="general_info" class="item">
+        <h3>What am I up to?</h3>
+        <p> I am currently working as a freelancer on management and developing a social network for trainers and athletes. In the meantime I keep researching and learning on the subject of innovation, code and digital entrepeneurship.</p>
       </div>
 
-      <div id="secondary" class="item">
-        <h3> Contact Details </h3>
+      <div id="contact_list" class="item">
+        <h3> How to reach me </h3>
         <ul class="contact-info">
           <!-- Address -->
           <li class="item address">
@@ -58,13 +72,10 @@
             </svg>
             <div class="address_text">
               <p>IDEIA HUB</p>
-              <p>Avenida Fontes Pereira de Mello n. 16</p>
-              <p>1010-010 Lisboa</p>
+              <p>Avenida Fontes Pereira de Mello n.16</p>
+              <p>1050-010 Lisboa</p>
             </div>
-
-
           </li>
-          <!-- MAIL -->
           <!-- PHONE -->
           <li class="item phone">
             <a href="tel:00351917101075"> <svg class="icon" aria-hidden="true" viewBox="0 0 448 512">
@@ -97,9 +108,16 @@
                 </path>
               </svg>My LINKEDIN page</a>
           </li>
-
       </div>
+
+      <div id="map" class="item">
+        <h3> M'a Hood! </h3>
+        <iframe src="https://snazzymaps.com/embed/180469" width="100%" height="300" style="border:none;"> </iframe>
+      </div>
+
     </div>
+
+
 
 
 
